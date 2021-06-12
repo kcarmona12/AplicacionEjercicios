@@ -1,0 +1,38 @@
+﻿@model List<AplicacionEjercicios.Models.Rutina>
+
+<h3 class="text-center text-info">Mis Rutinas</h3>
+
+<div class="row mb-3">
+    <div class="col">
+        <a href="/Rutina/Registrar" class="btn btn-info"> Registrar Rutina</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rutina</th>
+                    <th>Duración</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rutina in Model)
+                {
+    <tr>
+        <td>@rutina.Id </td>
+        <td>@rutina.Nombre </td>
+        <td>@rutina.CalcularDuracion() segundos </td>
+
+
+        <td>
+            <a href="/Rutina/Detalle/@rutina.Id" class="btn btn-primary">Detalle</a>
+        </td>
+    </tr>}
+            </tbody>
+        </table>
+    </div>
+</div>

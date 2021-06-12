@@ -1,0 +1,31 @@
+﻿
+@model AplicacionEjercicios.Models.Rutina
+
+
+<h3 class="text-center">@Model.Nombre | Tipo: @Model.Tipo</h3>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ejercicio</th>
+                    <th>Link Youtube</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ejercicio in Model.EjerRutinas)
+                {
+    <tr>
+        <td>@ejercicio.Ejercicio.Id </td>
+        <td>@ejercicio.Ejercicio.Nombre </td>
+        <td>@ejercicio.Ejercicio.Link </td>
+        <td>@ejercicio.Duracion segundos</td>
+    </tr>
+    }
+            </tbody>
+        </table>
+    </div>
+</div>

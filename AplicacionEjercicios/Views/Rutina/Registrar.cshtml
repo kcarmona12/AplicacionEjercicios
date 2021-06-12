@@ -1,0 +1,29 @@
+﻿
+
+
+<h1 class="text-center text-success">Registra Rutina</h1>
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <form action="/Rutina/Registrar" method="post">
+            <div class="form-group">
+<a href="E:\T3Diars-master\Views\Shared\_Layout.cshtml">E:\T3Diars-master\Views\Shared\_Layout.cshtml</a>group">
+                <label>Nombre</label>
+                <input type="text" name="Nombre" value="" class="form-control" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>Dificultad</label>
+                <select name="Tipo" class="form-control">
+                    <option value="Principiante">Principiante</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                </select>
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Error")</span>
+            <br />
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
